@@ -6,7 +6,7 @@ def encrypt_p(msg, shift):
             new_letter = letter
             new_msg = new_msg + letter
         if letter.isupper():
-            new_letter = (shift + fffford(letter) - 65) % 26 + 65
+            new_letter = (shift + ord(letter) - 65) % 26 + 65
             new_msg = new_msg + chr(new_letter)
         elif letter.islower():
             new_letter = (shift + ord(letter) - 97) % 26 + 97
@@ -23,7 +23,7 @@ def encrypt_n(msg, shift):
 def decrypt_n(msg, shift):
     encrypt_p(msg, shift)
 
-question = input("enter e for encrypting, or d for decrypting hygbyu: ").lower()
+question = input("enter e for encrypting, or d for decrypting: ").lower()
 shift = int(input("enter the shift: "))
 sign = input("enter p for a positive shift, or n for a negative shift: ").lower()
 msg = input("enter your message: ")

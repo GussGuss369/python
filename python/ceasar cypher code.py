@@ -2,14 +2,15 @@
 def encrypt_p(msg, shift):
     new_msg = ""
     for letter in msg:
+        if letter == " " or letter == "," or letter == "." or letter == "(" or letter == ")" or letter.isnumeric():
+            new_letter = letter
+            new_msg = new_msg + letter
         if letter.isupper():
             new_letter = (shift + ord(letter) - 65) % 26 + 65
             new_msg = new_msg + chr(new_letter)
         elif letter.islower():
             new_letter = (shift + ord(letter) - 97) % 26 + 97
             new_msg = new_msg + chr(new_letter)
-        elif letter.isspace():
-            new_msg = new_msg + " "
     print(new_msg)
 
 def decrypt_p(msg, shift):

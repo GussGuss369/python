@@ -24,7 +24,7 @@ def decrypt_n(msg, shift):
     encrypt_p(msg, shift)
 
 question = input("enter e for encrypting, or d for decrypting: ").lower()
-shift = int(input("enter the shift sdasdhsad: "))
+shift = int(input("enter the shift: "))
 sign = input("enter p for a positive shift, or n for a negative shift: ").lower()
 msg = input("enter your message: ")
 

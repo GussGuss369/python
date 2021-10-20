@@ -1,4 +1,10 @@
 #ceasar cypher code
+final = ""
+def file():
+    f = open("ceaser.txt", "a")
+    f.write(final)
+    f.close()
+
 def encrypt_p(msg, shift):
     new_msg = ""
     for letter in msg:
@@ -12,6 +18,9 @@ def encrypt_p(msg, shift):
             new_letter = (shift + ord(letter) - 97) % 26 + 97
             new_msg = new_msg + chr(new_letter)
     print(new_msg)
+    final = new_msg
+    return final
+    file()
 
 def decrypt_p(msg, shift):
     shift = -shift

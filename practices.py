@@ -9,4 +9,3 @@ while True:
         break
     print (i)
     i +=2
-

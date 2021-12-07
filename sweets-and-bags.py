@@ -19,4 +19,4 @@ if sweets > bag:
 elif sweets == bag:
     print("you cannot have equal sweets and bags")
 else:
-    print("it is impossible as sweets are less thean the number of bags")
+    print("it is impossible as sweets are less than the number of bags")

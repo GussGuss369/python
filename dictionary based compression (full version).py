@@ -12,14 +12,14 @@ def task1(sentence, word):
     return positions if found else "Word not found"
 print(task1(sentence, word))
 
-a_file = open("sentence", "r")
-list_of_lists = []
-for line in a_file:
-    stripped_line = line. strip()
-    line_list = stripped_line. split()
-    list_of_lists. append(line_list)
-    a_file
-print(list_of_lists)
+#a_file = open("sentence", "r")
+#list_of_lists = []
+#for line in a_file:
+#    stripped_line = line. strip()
+#    line_list = stripped_line. split()
+#    list_of_lists. append(line_list)
+#    a_file
+#print(list_of_lists)
 
 def task2(sentence):
     unique_words = []
@@ -31,15 +31,20 @@ def task2(sentence):
         for u in range(len(unique_words)):
             if unique_words[u] == word:
                 positions.append(u+1)
-
     try:
         with open("sentence", "w") as f:
-            f.write(str(positions))
+            f.write(str(positions)) + "\n" + str(unique_words)
     except:
         print("Error with file")
-
     
     return unique_words, positions
 
+user = input("enter the sentece to compress: ")
 
+f = open("sentence" , "w")
+f.write(user)
+f.close()
+
+f = open("sentence" , "w")
+print(f.read())
 print(task2(sentence))

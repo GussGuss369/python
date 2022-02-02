@@ -1,5 +1,19 @@
 sentence = "askaskaskaskask country"
 word = input("enter a word to find in the sentence: ")
+user = input("enter the sentece to compress: ")
+
+f = open("sentence" , "w")
+f.write(user)
+f.close()
+
+user = input("enter the sentece to compress: ")
+
+f = open("sentence" , "w")
+f.write(user)
+f.close()
+
+f = open("sentence" , "w")
+print(f.read())
 
 def task1(sentence, word):
     s = sentence.lower().split()

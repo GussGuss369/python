@@ -8,4 +8,4 @@ def longest_word(str):
             longest = i
     print(f"longest word is {longest} with {maximum} letters")
 user = input("enter the sentence: ")
-longest_word(user)
+longest_word(user) 

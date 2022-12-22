@@ -14,8 +14,7 @@ def binarySearch(itemSearched):
             end = middle - 1
         elif itemSearched > names[middle]:
             start = middle + 1
-            counter += 1
-    return found
-
+        counter += 1
+    return counter
 user = input("enter a name to find from the list")
 print(binarySearch(user))

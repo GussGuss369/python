@@ -205,6 +205,9 @@ def SendReceiveMessages():
   Dot = [5,18,0,0,2,9,0,26,0,19,0,3,0,7,4,0,0,0,12,8,14,6,0,16,0,0,0]
   Letter = [' ','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
   MorseCode = [' ','.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..']
+  v1 = int(input("enter the first value key: "))
+  v2 = int(input("enter the second value key: "))
+  v3 = int(input("enter the third vallue key: "))
   ProgramEnd = False
   while not ProgramEnd:
     DisplayMenu() 
@@ -212,9 +215,6 @@ def SendReceiveMessages():
     if MenuOption == 'R':
       ReceiveMorseCode(Dash, Letter, Dot)
     elif MenuOption == 'S':
-      v1 = int(input("enter the first value key: "))
-      v2 = int(input("enter the second value key: "))
-      v3 = int(input("enter the third vallue key: "))
       SendMorseCode(MorseCode, v1, v2, v3)
     elif MenuOption == 'X':
       ProgramEnd = True
